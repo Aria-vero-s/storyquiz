@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="assets/CSS/stylesheet.css" rel="stylesheet">
+  <script defer src="assets/javascript/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Story quiz</title>
+</head>
+<body>
+
+  <div class="logo">
+    <a href="index.html"><h1>Story quiz</h1></a>
+    <h3>Online reading comprehension exercises for young children</h3>
+  </div>
+  <div id="nav">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
+  </ul>
+  </div>
+
+  <div class="storytext">
+    <h2>Contact</h2>
+        <form method="GET" action="feedback.html" class="signup-form">
+            
+            <label for="fname">First Name</label>
+            <input id="fname" class="text-input" name="first_name" type="text" required>
+            
+            <label for="lname">Last Name</label>
+            <input id="lname" class="text-input" name="last_name" type="text" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" class="text-input" id="email" name="email_address" required>
+            
+            <label for="comment">Leave a comment</label>
+            <textarea id="comment" class="text-input" name="comment" type="text" style="height:100px; text-align: start;"></textarea>
+            
+            <input class="join-button" type="submit" value="Sign up">
+        </form>
+  </div>
+
+</body>
+</html>
