@@ -83,7 +83,7 @@ ul a:hover {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: Gotham Rounded;
+  font-family: 'Montserrat', sans-serif;
 }
   
   :root {

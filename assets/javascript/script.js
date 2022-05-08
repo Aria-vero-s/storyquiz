@@ -78,35 +78,35 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Which animals are in the story?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'A fox and a crow', correct: true },
+      { text: 'A dog and a cat', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'What kind of food does the crow have at the beginning?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'fruit', correct: false },
+      { text: 'cheese', correct: false },
+      { text: 'bread', correct: false },
+      { text: 'pizza', correct: true }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'Who gets the cheese in the end?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'the crow', correct: false },
+      { text: 'the fox', correct: true },
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'Which of the following words defines the word "flattery" the best?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'expensive', correct: false },
+      { text: 'ugly', correct: false },
+      { text: 'complimenting', correct: false },
+      { text: 'funny', correct: true }
     ]
   }
 ]
