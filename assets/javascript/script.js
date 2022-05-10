@@ -88,9 +88,9 @@ const questions = [
     question: 'What kind of food does the crow have at the beginning?',
     answers: [
       { text: 'fruit', correct: false },
-      { text: 'cheese', correct: false },
+      { text: 'cheese', correct: true },
       { text: 'bread', correct: false },
-      { text: 'pizza', correct: true }
+      { text: 'pizza', correct: false }
     ]
   },
   {
@@ -101,12 +101,12 @@ const questions = [
     ]
   },
   {
-    question: 'Which of the following words defines the word "flattery" the best?',
+    question: 'Which of the following words reflects the moral of the story the best?',
     answers: [
-      { text: 'expensive', correct: false },
-      { text: 'ugly', correct: false },
-      { text: 'complimenting', correct: false },
-      { text: 'funny', correct: true }
+      { text: 'money', correct: false },
+      { text: 'beauty', correct: false },
+      { text: 'flattery', correct: true },
+      { text: 'funny', correct: false }
     ]
   }
 ]

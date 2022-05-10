@@ -64,19 +64,36 @@ ul a:hover {
 
 /* story */
 
-.storytext h2, p{
+.container2 h2, p{
   font-family: 'Montserrat', sans-serif;
   padding-top:30px;
   margin: 0 auto;
   max-width:90%;
 }
 
-.storytext{
+.container2{
   font-family: 'Montserrat', sans-serif;
   max-width: 90%;
   background-color: white;
   padding: 10px;
   margin: 0 auto;
+  min-height: 300px;
+}
+
+.container3 h2, p{
+  font-family: 'Montserrat', sans-serif;
+  padding-top:30px;
+  margin: 0 auto;
+  max-width:90%;
+}
+
+.container3{
+  font-family: 'Montserrat', sans-serif;
+  max-width: 90%;
+  background-color: white;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 600px;
 }
 
 /* quiz */
@@ -106,6 +123,7 @@ ul a:hover {
     border: #000;
     margin: 0 auto;
     max-width:90%;
+    min-height: 300px;
   }
   
   .btn-grid {
@@ -121,7 +139,7 @@ ul a:hover {
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: #565254;
     outline: none;
   }
   
