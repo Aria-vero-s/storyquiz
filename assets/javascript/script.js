@@ -4,7 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
+let currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -57,7 +57,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    startButton.innerText = 'Submit'
     startButton.classList.remove('hide')
   }
 }
@@ -101,12 +101,12 @@ const questions = [
     ]
   },
   {
-    question: 'Which of the following words reflects the moral of the story the best?',
+    question: 'What is the theme of the moral of the story?',
     answers: [
       { text: 'money', correct: false },
       { text: 'beauty', correct: false },
       { text: 'flattery', correct: true },
-      { text: 'funny', correct: false }
+      { text: 'happiness', correct: false }
     ]
   }
 ]

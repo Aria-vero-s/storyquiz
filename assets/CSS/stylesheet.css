@@ -122,7 +122,7 @@ ul a:hover {
     padding: 10px;
     border: #000;
     margin: 0 auto;
-    max-width:90%;
+    max-width: 90%;
     min-height: 300px;
   }
   
@@ -131,6 +131,7 @@ ul a:hover {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+    max-inline-size: 90%;
   }
   
   .btn {
