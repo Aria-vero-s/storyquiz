@@ -57,7 +57,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Submit'
+    startButton.innerText = 'Start'
     startButton.classList.remove('hide')
   }
 }
