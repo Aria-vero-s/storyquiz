@@ -1,12 +1,15 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const endButton = document.getElementById('end-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const resultContainerElement = document.getElementById('result-container')
 
 let currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
+endButton.addEventListener('click', endGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -18,11 +21,24 @@ function startGame() {
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
+  counter = 0;
+  while(counter<4) {
+    counter++}
+  endGame()
+}
+
+function endGame() {
+  endButton.classList.add('hide')
+  counter = resetState;
 }
 
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showResults() {
+  resultContainerElement.classList.remove('hide')
 }
 
 function showQuestion(question) {

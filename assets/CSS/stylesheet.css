@@ -27,7 +27,7 @@ h1{
   font-size:50px;
 }
 
-h2, h3, p{
+h2, h3, p {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -35,15 +35,12 @@ h2, h3, p{
 
 ul {
   background-color:#CCFF66;
+  width: 90%;
   margin: 0 auto;
-  border: 0;
-  width:90%;
-  padding: 20px;
 }
 
 li {
-  display: inline;
-  margin-right:30px;
+  display: inline-block;
   letter-spacing: 10px;
 }
 
@@ -52,6 +49,8 @@ ul a {
   text-decoration: none;
   color:#565254;
   padding:20px;
+  display: inline-block;
+  float:left;
 }
 ul a:hover {
   text-decoration: none;
@@ -60,6 +59,20 @@ ul a:hover {
 
 .active {
   background-color: white;
+
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    float: none;
+  }
+  ul li {
+    display:flex;
+  }
+  .active {
+    background-color: white;
+
+  }
 }
 
 /* story */
@@ -173,6 +186,33 @@ ul a:hover {
   .hide {
     display: none;
   }
+
+  /* About */
+
+  .about {
+    font-size: x-large;
+    color:#fff;
+    background-color:rgba(86, 82, 84, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+
+  .picture {
+    position: relative;
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+}
 
   /* Form */
 
