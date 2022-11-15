@@ -21,15 +21,14 @@ function startGame() {
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
-  counter = 0;
-  while(counter<4) {
-    counter++}
-  endGame()
 }
 
 function endGame() {
-  endButton.classList.add('hide')
-  counter = resetState;
+  console.log("Funct end game");
+  endButton.classList.remove('hide')
+  endButton.innerText = 'end'
+  endButton.removeEventListener('click', endGame);
+  showResults()
 }
 
 function setNextQuestion() {
@@ -56,6 +55,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+  console.log("Funct reset state");
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
   while (answerButtonsElement.firstChild) {
@@ -72,9 +72,10 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
+    endButton.classList.add('hide')
   } else {
-    startButton.innerText = 'Start'
-    startButton.classList.remove('hide')
+    answerButtonsElement.removeEventListener('click', selectAnswer);
+    endGame()
   }
 }
 
