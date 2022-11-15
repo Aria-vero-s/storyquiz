@@ -74,8 +74,9 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
     endButton.classList.add('hide')
   } else {
-    answerButtonsElement.removeEventListener('click', selectAnswer);
-    endGame()
+    Array.from(answerButtonsElement.children).forEach(button => {
+    button.removeEventListener('click', selectAnswer); }),
+    endGame();
   }
 }
 
