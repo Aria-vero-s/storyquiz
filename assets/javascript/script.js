@@ -4,12 +4,12 @@ const endButton = document.getElementById('end-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const resultContainerElement = document.getElementById('result-container')
+const resultsContainerElement = document.getElementById('results-container')
 
 let currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
-endButton.addEventListener('click', endGame)
+endButton.addEventListener('click', showResults);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -27,8 +27,7 @@ function endGame() {
   console.log("Funct end game");
   endButton.classList.remove('hide')
   endButton.innerText = 'end'
-  endButton.removeEventListener('click', endGame);
-  showResults()
+  endButton.addEventListener('click', showResults(question, results));
 }
 
 function setNextQuestion() {
@@ -36,8 +35,21 @@ function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showResults() {
-  resultContainerElement.classList.remove('hide')
+function showResults(question, results) {
+  endButton.classList.add('hide')
+  var question = document.getElementById('resultsContainer')
+  var results = '';
+  var numCorrect = 0;
+  for (var i = 0; i < question.length; i++) {
+    results = (question[i].querySelector).value;
+    if (results === question[i].correctAnswer) {
+      numCorrect++;
+      question[i].style.color = 'lightgreen';
+    } else {
+      question[i].style.color = 'red';
+    }
+  }
+  resultsContainerElement.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
 function showQuestion(question) {
@@ -75,8 +87,9 @@ function selectAnswer(e) {
     endButton.classList.add('hide')
   } else {
     Array.from(answerButtonsElement.children).forEach(button => {
-    button.removeEventListener('click', selectAnswer); }),
-    endGame();
+        button.removeEventListener('click', selectAnswer);
+      }),
+      endGame();
   }
 }
 
@@ -94,37 +107,68 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-const questions = [
-  {
+const questions = [{
     question: 'Which animals are in the story?',
-    answers: [
-      { text: 'A fox and a crow', correct: true },
-      { text: 'A dog and a cat', correct: false }
+    answers: [{
+        text: 'A fox and a crow',
+        correct: true
+      },
+      {
+        text: 'A dog and a cat',
+        correct: false
+      }
     ]
   },
   {
     question: 'What kind of food does the crow have at the beginning?',
-    answers: [
-      { text: 'fruit', correct: false },
-      { text: 'cheese', correct: true },
-      { text: 'bread', correct: false },
-      { text: 'pizza', correct: false }
+    answers: [{
+        text: 'fruit',
+        correct: false
+      },
+      {
+        text: 'cheese',
+        correct: true
+      },
+      {
+        text: 'bread',
+        correct: false
+      },
+      {
+        text: 'pizza',
+        correct: false
+      }
     ]
   },
   {
     question: 'Who gets the cheese in the end?',
-    answers: [
-      { text: 'the crow', correct: false },
-      { text: 'the fox', correct: true },
+    answers: [{
+        text: 'the crow',
+        correct: false
+      },
+      {
+        text: 'the fox',
+        correct: true
+      },
     ]
   },
   {
     question: 'What is the theme of the moral of the story?',
-    answers: [
-      { text: 'money', correct: false },
-      { text: 'beauty', correct: false },
-      { text: 'flattery', correct: true },
-      { text: 'happiness', correct: false }
+    answers: [{
+        text: 'money',
+        correct: false
+      },
+      {
+        text: 'beauty',
+        correct: false
+      },
+      {
+        text: 'flattery',
+        correct: true
+      },
+      {
+        text: 'happiness',
+        correct: false
+      }
     ]
   }
 ]
