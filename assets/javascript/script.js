@@ -41,7 +41,7 @@ function showResults() {
   questionContainerElement.innerHTML = 'You got ' + numCorrect + ' out of ' + questions.length;
   startButton.classList.remove('hide')
   startButton.innerText = 'Play again?'
-  startButton.addEventListener('click', resetState, startGame)
+  startButton.addEventListener('click',function(){location.reload()});
 }
 
 function showQuestion(question) {
