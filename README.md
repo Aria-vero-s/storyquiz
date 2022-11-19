@@ -1,10 +1,12 @@
 # Story quiz
 
-Story quiz is a site that hopes to support online learning. The site will be targeted towards school teachers or online tutors. The site will be useful to them by proving them with a compilation of reading exercises.
+Story quiz is a site that hopes to support online learning. The site will be targeted towards school teachers or online tutors. The site will be useful to them by proving a reading quiz based on the books of their choice. The user needs to send the requested information through the contact page and will receive a quiz like the one shown on the home page.
+
+<img width="100%" alt="mockup" src="https://user-images.githubusercontent.com/99185542/202861603-1356e6ab-6d3b-40a4-b717-c5c794f660cf.png">
 
 ## Features 
 
-In this website, the viewer will find a quiz example, an about section and a contact page. The first quiz is about a famous fable by Aesop. After reading the fable, the student can procede to the quiz and answer 4 questions.
+In this website, the viewer will find a quiz example, an about section and a contact page. The quiz is about a famous fable by Aesop. After reading the fable, the student can procede to the quiz and answer 4 questions.
 
 ### Existing Features
 
@@ -35,3 +37,4 @@ You can break the credits section up into Content and Media, depending on what y
 - Instructions on how to implement a quiz is from https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified
 - The image for the about section was taken from https://www.canva.com/photos/MAEcI1aGsvI-a-girl-using-a-tablet-computer/
 - The image for the quiz was taken from https://pixabay.com/illustrations/a-fox-chanterelle-forest-4816115/
+- The image for the quiz example was taken from https://unsplash.com/photos/4Zaq5xY5M_c
