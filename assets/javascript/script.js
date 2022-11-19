@@ -7,9 +7,10 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const resultsContainerElement = document.getElementById('results-container')
 
 let currentQuestionIndex
+let numCorrect = 0;
 
 startButton.addEventListener('click', startGame)
-endButton.addEventListener('click', showResults);
+endButton.addEventListener('click', endGame);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -27,7 +28,7 @@ function endGame() {
   console.log("Funct end game");
   endButton.classList.remove('hide')
   endButton.innerText = 'end'
-  endButton.addEventListener('click', showResults());
+  endButton.addEventListener('click', showResults);
 }
 
 function setNextQuestion() {
@@ -36,13 +37,11 @@ function setNextQuestion() {
 }
 
 function showResults() {
-  var numCorrect = 0;
-  for (var i = 0; i < questions.length; i++) {
-    if (answer.correct) {
-      numCorrect++;
-    }
-  }
-  resultsContainerElement.innerHTML = numCorrect + ' out of ' + questions.length;
+  endButton.classList.add('hide')
+  questionContainerElement.innerHTML = 'You got ' + numCorrect + ' out of ' + questions.length;
+  startButton.classList.remove('hide')
+  startButton.innerText = 'Play again?'
+  startButton.addEventListener('click', resetState, startGame)
 }
 
 function showQuestion(question) {
@@ -77,12 +76,14 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
-    endButton.classList.add('hide')
   } else {
     Array.from(answerButtonsElement.children).forEach(button => {
         button.removeEventListener('click', selectAnswer);
       }),
-      endGame();
+    endGame();
+  }
+  if (correct) {
+    numCorrect++;
   }
 }
 
