@@ -27,7 +27,7 @@ function endGame() {
   console.log("Funct end game");
   endButton.classList.remove('hide')
   endButton.innerText = 'end'
-  endButton.addEventListener('click', showResults(question, results));
+  endButton.addEventListener('click', showResults());
 }
 
 function setNextQuestion() {
@@ -35,18 +35,11 @@ function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showResults(question, results) {
-  endButton.classList.add('hide')
-  var question = document.getElementById('resultsContainer')
-  var results = '';
+function showResults() {
   var numCorrect = 0;
-  for (var i = 0; i < question.length; i++) {
-    results = (question[i].querySelector).value;
-    if (results === question[i].correctAnswer) {
+  for (var i = 0; i < questions.length; i++) {
+    if (answer.correct) {
       numCorrect++;
-      question[i].style.color = 'lightgreen';
-    } else {
-      question[i].style.color = 'red';
     }
   }
   resultsContainerElement.innerHTML = numCorrect + ' out of ' + questions.length;
